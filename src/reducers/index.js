@@ -32,18 +32,18 @@ const reducer = (state = initialState, action) => {
                 errorMessage: action.payload
             })
         case ADD_SMURF:
-            const newSmurfId = action.payload
+            const newSmurf = action.payload;
             return({
                 ...state,
                 smurfs: {
                     ...state.smurfs,
-                    newSmurfId
+                    newSmurf
                 }
             });
         case SET_ERROR_MESSAGE:
             return({
                 ...state,
-                errorMessage: action.payload
+                errorMessage: "Error: name, position, and nickname are required fields"
             });
         default:
             return state;

@@ -32,12 +32,12 @@ const reducer = (state = initialState, action) => {
                 errorMessage: action.payload
             })
         case 'ADD_SMURF':
-            const newSmurf = action.payload
+            const newSmurfId = action.payload
             return({
                 ...state,
                 smurfs: {
                     ...state.smurfs,
-                    newSmurf
+                    newSmurfId
                 }
             });
         case 'ADD_ERROR_MESSAGE':

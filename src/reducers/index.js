@@ -35,10 +35,10 @@ const reducer = (state = initialState, action) => {
             const newSmurf = action.payload;
             return({
                 ...state,
-                smurfs: {
+                smurfs: [
                     ...state.smurfs,
                     newSmurf
-                }
+                ]
             });
         case SET_ERROR_MESSAGE:
             return({

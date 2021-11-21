@@ -22,12 +22,12 @@ export const fetchSmurfs = () => {
     }
 }
 
-export const addSmurf = (newSmurfId) => {
-    return { type: ADD_SMURF, payload: newSmurfId };
+export const addSmurf = (newSmurf) => {
+    return { type: ADD_SMURF, payload: newSmurf };
 }
 
-export const setError = (error) => {
-    return { type: SET_ERROR_MESSAGE, payload: error };
+export const setError = () => {
+    return { type: SET_ERROR_MESSAGE };
 }
 
 //Task List:

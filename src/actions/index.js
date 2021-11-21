@@ -4,7 +4,7 @@ export const FETCH_SMURFS_LOADING = 'FETCH_SMURFS_LOADING';
 export const FETCH_SMURFS_SUCCESS = 'FETCH_SMURFS_SUCCESS';
 export const FETCH_SMURFS_FAIL = 'FETCH_SMURFS_FAIL';
 export const ADD_SMURF = 'ADD_SMURF';
-export const ADD_ERROR_MESSAGE = 'ADD_ERROR_MESSAGE';
+export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE';
 
 export const fetchSmurfs = () => {
     return dispatch => {
@@ -26,8 +26,8 @@ export const addSmurf = (newSmurfId) => {
     return { type: ADD_SMURF, payload: newSmurfId };
 }
 
-export const addError = (error) => {
-    return { type: ADD_ERROR_MESSAGE, payload: error };
+export const setError = (error) => {
+    return { type: SET_ERROR_MESSAGE, payload: error };
 }
 
 //Task List:

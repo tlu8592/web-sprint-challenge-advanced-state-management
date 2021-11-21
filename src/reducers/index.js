@@ -3,7 +3,7 @@ import {
     FETCH_SMURFS_SUCCESS,
     FETCH_SMURFS_FAIL,
     ADD_SMURF,
-    ADD_ERROR_MESSAGE
+    SET_ERROR_MESSAGE
 } from '../actions/index';
 
 export const initialState = {
@@ -14,24 +14,24 @@ export const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'FETCH_SMURFS_LOADING':
+        case FETCH_SMURFS_LOADING:
             return({
                 ...state,
                 isLoading: true
             });
-        case 'FETCH_SMURFS_SUCCESS':
+        case FETCH_SMURFS_SUCCESS:
             return({
                 ...state,
                 smurfs: action.payload,
                 isLoading: false
             })
-        case 'FETCH_SMURFS_FAIL':
+        case FETCH_SMURFS_FAIL:
             return({
                 ...state,
                 isLoading: false,
                 errorMessage: action.payload
             })
-        case 'ADD_SMURF':
+        case ADD_SMURF:
             const newSmurfId = action.payload
             return({
                 ...state,
@@ -40,7 +40,7 @@ const reducer = (state = initialState, action) => {
                     newSmurfId
                 }
             });
-        case 'ADD_ERROR_MESSAGE':
+        case SET_ERROR_MESSAGE:
             return({
                 ...state,
                 errorMessage: action.payload

@@ -10,9 +10,6 @@ const AddForm = (props) => {
         nickname:"",
         description:""
     });
-
-    //remove when error state is added
-    // const errorMessage = "";
     
     const { errorMessage, setError, addSmurf } = props;
 

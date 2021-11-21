@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { connect } from 'react-redux';
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
@@ -7,7 +7,6 @@ import { fetchSmurfs } from "./actions";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { useEffect } from "react";
 
 const App = (props) => {
   const { fetchSmurfs } = props;
@@ -34,8 +33,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-
-// export default App;
 export default connect(mapStateToProps, { fetchSmurfs })(App);
 
 //Task List:
